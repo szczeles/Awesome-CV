@@ -12,3 +12,6 @@ cv.pdf: cv.tex $(CV_SRCS)
 
 clean:
 	rm -rf $(EXAMPLES_DIR)/*.pdf
+
+build:
+	docker run -v `pwd`:/workdir --rm texlive/texlive:latest make
